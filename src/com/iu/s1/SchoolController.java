@@ -16,6 +16,7 @@ public class SchoolController {
 			Student [] students =null;
 			StudentService ss= new StudentService();
 			StudentView sv= new StudentView();
+			Student st =new Student();
 		boolean check =true;
 		
 		while(check) {
@@ -33,6 +34,7 @@ public class SchoolController {
 		students=ss.addStudent();
 		break;
 		case 2 :System.out.println("성적 입력");
+		ss.addPoint(students);
 		break;
 		case 3:System.out.println("성적 조회");
 		break;
